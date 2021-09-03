@@ -6,6 +6,8 @@ import { LandingComponent } from './views/landing/landing.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TimerComponent } from './views/landing/timer/timer.component';
+import { CalculatorComponent } from './views/landing/calculator/calculator.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,9 @@ import { TimerComponent } from './views/landing/timer/timer.component';
     HeaderComponent,
     FooterComponent,
     TimerComponent,
+    CalculatorComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   providers: [],
   exports: [AppComponent],
 })

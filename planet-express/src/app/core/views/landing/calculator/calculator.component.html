@@ -1,0 +1,31 @@
+<div class="calculator">
+
+    <div class="text">
+        <h2>Calculadora de precio:</h2>
+        <p>La calculadora pone en relación los valores introducidos y te proporcionará el precio por el paquete.
+        </p>
+    </div>
+
+
+    <!-- ReactiveFormsModule -->
+    <form id="loginForm" [formGroup]="calculatorForm" (ngSubmit)="saveClick(calculatorForm)">
+
+
+        <div class="field">
+            <span>Cantidad</span>
+            <input type="number" placeholder="nº" formControlName="quantity">
+        </div>
+        <div class="field">
+            <span>Peso</span>
+            <input type="number" placeholder="kg" formControlName="weight">
+        </div>
+        <button class="botonGreen" mat-flat-button color="accent" type="submit">Calcular</button>
+
+        <div class="result" *ngIf="active">
+            <span>Precio</span>
+            <!-- Resultado -->
+            <p>{{result}}</p>
+        </div>
+
+    </form>
+</div>

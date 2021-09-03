@@ -50,11 +50,16 @@
       gap: 2.4rem;
       grid-template-columns: repeat(auto-fit, minmax(min(324px, 100%), 1fr));
       text-align: center;
-      .fas {
-        color: $colorRed;
-        font-size: 4rem;
-        margin: 1rem 0 2rem;
-        //
+
+      .section {
+        box-shadow: 0 0 2px rgba(170, 170, 170, 0.89);
+        border-radius: 5px;
+        padding: 5rem 1rem;
+        .fas {
+          color: $colorRed;
+          font-size: 4rem;
+          margin: 1rem 0 2rem;
+        }
       }
     }
   }

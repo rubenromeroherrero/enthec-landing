@@ -2,7 +2,8 @@
 
     <div class="text">
         <h2>Calculadora de precio:</h2>
-        <p>La calculadora pone en relación los valores introducidos y te proporcionará el precio por el paquete.
+        <p>La calculadora pone en relación los valores introducidos y te proporcionará el precio por el paquete que
+            deseas enviar.
         </p>
     </div>
 
@@ -10,6 +11,7 @@
     <!-- ReactiveFormsModule -->
     <form id="loginForm" [formGroup]="calculatorForm" (ngSubmit)="saveClick(calculatorForm)">
 
+        <h3>Introduce los datos:</h3>
 
         <div class="field">
             <span>Cantidad</span>
@@ -22,9 +24,8 @@
         <button class="botonGreen" mat-flat-button color="accent" type="submit">Calcular</button>
 
         <div class="result" *ngIf="active">
-            <span>Precio</span>
             <!-- Resultado -->
-            <p>{{result}}</p>
+            <p>Precio: {{result}} €</p>
         </div>
 
     </form>

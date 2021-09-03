@@ -1,0 +1,27 @@
+@import "../../../../variables";
+@import "../../../../mixins";
+
+header {
+  padding: 1rem 4rem;
+  color: $colorText;
+  background-color: $colorGray;
+  width: 100%;
+  @include flex-justify-between;
+  .logo {
+    background-image: url("../../../../../images/Planet_Favicon.png");
+    width: 250px;
+    height: 60px;
+    @include bg-contain;
+    cursor: pointer;
+  }
+  .links {
+    span {
+      margin-right: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $colorRed;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
 
 
     <!-- ReactiveFormsModule -->
-    <form id="loginForm" [formGroup]="calculatorForm" (ngSubmit)="saveClick(calculatorForm)">
+    <form id="calculatorForm" [formGroup]="calculatorForm" (ngSubmit)="saveClick(calculatorForm)">
 
         <h3>Introduce los datos:</h3>
 
@@ -21,7 +21,7 @@
             <span>Peso</span>
             <input type="number" placeholder="kg" formControlName="weight">
         </div>
-        <button class="botonGreen" mat-flat-button color="accent" type="submit">Calcular</button>
+        <button type="submit">Calcular</button>
 
         <div class="result" *ngIf="active">
             <!-- Resultado -->

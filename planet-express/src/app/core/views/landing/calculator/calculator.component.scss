@@ -7,6 +7,7 @@
   grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   justify-items: center;
   padding: 1rem 8%;
+  margin: 6rem 0;
 
   .text {
     h2 {
@@ -25,12 +26,12 @@
 
     h3 {
       margin: 0 0 1rem;
+      color: $colorGray;
     }
 
     .field {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
+      @include flex-just-between-only;
       margin: 0.5rem 0;
       input {
         width: 70%;

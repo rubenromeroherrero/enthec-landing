@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TimerComponent } from './views/landing/timer/timer.component';
 import { CalculatorComponent } from './views/landing/calculator/calculator.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NewsletterComponent } from './views/landing/newsletter/newsletter.component';
 
 @NgModule({
@@ -20,7 +21,7 @@ import { NewsletterComponent } from './views/landing/newsletter/newsletter.compo
     CalculatorComponent,
     NewsletterComponent,
   ],
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   exports: [AppComponent],
 })

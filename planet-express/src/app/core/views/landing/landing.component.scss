@@ -39,7 +39,7 @@
   .services {
     width: 100%;
     @include flex-center-column;
-    margin: 6rem 0;
+    padding: 6rem 5%;
 
     h2 {
       color: $colorGray;
@@ -61,6 +61,28 @@
           font-size: 4rem;
           margin: 1rem 0 2rem;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    .photo {
+      h1 {
+        font-size: 2.2rem;
+        width: 460px;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    .photo {
+      h1 {
+        font-size: 1.8rem;
+        width: 410px;
       }
     }
   }

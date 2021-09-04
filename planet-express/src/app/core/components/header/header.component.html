@@ -1,6 +1,17 @@
-<header>
+<header class="pc">
     <div class="logo" [routerLink]="['/landing']"></div>
     <div class="links">
+        <span [routerLink]="['/landing']">Inicio</span>
+        <span [routerLink]="['#']">Ofertas</span>
+        <span [routerLink]="['#']">Calculadora</span>
+        <span [routerLink]="['#']">Sobre Nosotros</span>
+    </div>
+</header>
+
+<header class="phoneIpad">
+    <div class="logo" [routerLink]="['/landing']"></div>
+    <i class="fas fa-bars" (click)="showMenu()"></i>
+    <div class="linksMenu" *ngIf="activated">
         <span [routerLink]="['/landing']">Inicio</span>
         <span [routerLink]="['#']">Ofertas</span>
         <span [routerLink]="['#']">Calculadora</span>

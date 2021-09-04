@@ -5,7 +5,8 @@
   background-color: $colorGray;
   color: $colorText;
   @include flex-center-column;
-  padding: 10rem 1rem 12rem;
+  text-align: center;
+  padding: 10rem 3rem 10rem;
 
   h2 {
     color: $colorText;
@@ -46,6 +47,31 @@
     button {
       border: none;
       border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 4rem 3rem 4rem;
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    form {
+      input {
+        width: 280px;
+      }
+      button {
+        width: 280px;
+      }
     }
   }
 }

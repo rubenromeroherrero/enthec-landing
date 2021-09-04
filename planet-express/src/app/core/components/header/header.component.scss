@@ -2,11 +2,12 @@
 @import "../../../../mixins";
 
 header {
-  padding: 1rem 4rem;
+  padding: 1rem 6%;
   color: $colorText;
   background-color: $colorGray;
   width: 100%;
   @include flex-justify-between;
+  // position: fixed;
   .logo {
     background-image: url("../../../../../images/Planet_Favicon.png");
     width: 250px;
@@ -21,6 +22,46 @@ header {
 
       &:hover {
         color: $colorRed;
+      }
+    }
+  }
+}
+
+.phoneIpad {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .pc {
+    display: none;
+  }
+  // PHONE
+  .phoneIpad {
+    position: relative;
+    @include flex-justify-between;
+    .logo {
+      height: 50px;
+    }
+    .fas {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .linksMenu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 6%;
+      top: 75px;
+      background-color: $colorText;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      span {
+        cursor: pointer;
+        margin: 1rem 0;
+        color: $colorGray;
+        &:hover {
+          color: $colorRed;
+        }
       }
     }
   }

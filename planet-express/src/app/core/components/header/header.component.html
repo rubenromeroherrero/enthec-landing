@@ -14,8 +14,8 @@
     <i class="fas fa-bars" (click)="showMenu()"></i>
     <div class="linksMenu" *ngIf="activated">
         <a [routerLink]="['/landing']">Inicio</a>
-        <a [routerLink]="['#']">Ofertas</a>
-        <a [routerLink]="['#']">Calculadora</a>
-        <a [routerLink]="['#']">Sobre Nosotros</a>
+        <a [routerLink]="['']" fragment="ofert">Ofertas</a>
+        <a [routerLink]="['']" fragment="calculator">Calculadora</a>
+        <a [routerLink]="['']" fragment="employees">Sobre Nosotros</a>
     </div>
 </header>

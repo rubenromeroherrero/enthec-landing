@@ -10,7 +10,7 @@ export class TimerComponent implements OnInit {
 
   dateNow = new Date();
   // Fecha finalización
-  dDay = new Date('Sept 06 2021 00:00:00');
+  dDay = new Date('Sept 08 2021 00:00:00');
   milliSecondsInASecond = 1000;
   hoursInADay = 24;
   minutesInAnHour = 60;

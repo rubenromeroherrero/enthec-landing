@@ -1,0 +1,100 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
+
+.container {
+  background-color: $colorGray;
+  color: $colorText;
+  @include flex-center-column;
+  text-align: center;
+  padding: 10rem 3rem 10rem;
+
+  h2 {
+    color: $colorText;
+    font-size: 2.5rem;
+    font-family: $fontAccentBebas;
+    font-size: 4rem;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    margin: 0 0 1.5rem;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 1.4rem;
+  }
+
+  form {
+    @include flex-center-column;
+    input {
+      width: 350px;
+      padding: 1.1rem 1.2rem;
+      margin: 3rem 0 1rem;
+
+      &::placeholder {
+        font-style: italic;
+      }
+      &:focus {
+        box-shadow: 0 0 1px $colorGray;
+      }
+
+      &.ng-touched {
+        &.ng-invalid {
+          box-shadow: 0 0 2.5px red !important;
+        }
+      }
+    }
+
+    button {
+      width: 350px;
+      padding: 1.1rem 0.4rem;
+      cursor: pointer;
+      background-color: $colorRed;
+      color: $colorText;
+
+      &:hover {
+        filter: brightness(0.9);
+        box-shadow: 0 0 1px $colorRed;
+      }
+    }
+
+    input,
+    button {
+      border: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+// clase que se activa al formulario para cuando sean inválidos los datos
+.submited {
+  input {
+    &.ng-invalid {
+      box-shadow: 0 0 2.5px red !important;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 4rem 3rem 4rem;
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    form {
+      input {
+        width: 280px;
+      }
+      button {
+        width: 280px;
+      }
+    }
+  }
+}

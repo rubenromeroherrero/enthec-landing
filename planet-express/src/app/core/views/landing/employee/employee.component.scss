@@ -1,0 +1,41 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
+
+.container {
+  padding: 1rem 8%;
+  margin: 6rem 0;
+  text-align: center;
+
+  h1 {
+    color: $colorGray;
+    font-size: 2rem;
+    margin: 0 0 4rem;
+  }
+
+  .employees {
+    display: grid;
+    gap: 2.4rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr));
+    text-align: center;
+
+    .card {
+      text-align: center;
+      width: 250px;
+
+      img {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      h2 {
+        color: $colorRed;
+        margin: 1rem 0rem;
+      }
+    }
+  }
+}

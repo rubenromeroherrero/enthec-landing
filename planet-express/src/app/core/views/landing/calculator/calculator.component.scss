@@ -1,0 +1,101 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
+
+.calculator {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+  justify-items: center;
+  padding: 1rem 8%;
+  margin: 6rem 0;
+
+  .text {
+    h2 {
+      color: $colorGray;
+      font-size: 2rem;
+      margin: 0 0 1rem;
+    }
+  }
+
+  form {
+    width: 100%;
+    background-color: #dfdfdf;
+    border-radius: 8px;
+    padding: 4.5rem 3rem;
+    @include flex-column;
+
+    h3 {
+      margin: 0 0 1rem;
+      color: $colorGray;
+    }
+
+    .field {
+      width: 100%;
+      @include flex-just-between-only;
+      margin: 0.5rem 0;
+      input {
+        width: 70%;
+        padding: 0.4rem 1rem;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+
+        &::placeholder {
+          text-align: center;
+          font-style: italic;
+        }
+
+        &:focus {
+          box-shadow: 0 0 1px $colorGray;
+        }
+
+        &.ng-touched {
+          &.ng-invalid {
+            box-shadow: 0 0 2.5px red !important;
+          }
+        }
+      }
+    }
+
+    button {
+      margin: 1rem 0 0;
+      padding: 0.6rem 0;
+      border: none;
+      border-radius: 5px;
+      background-color: $colorRed;
+      color: $colorText;
+      cursor: pointer;
+    }
+
+    .result {
+      margin: 1rem 0 0;
+      font-style: italic;
+      text-align: end;
+    }
+  }
+}
+
+// clase que se activa al formulario para cuando sean inválidos los datos
+.submited {
+  input {
+    &.ng-invalid {
+      box-shadow: 0 0 2.5px red !important;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .calculator {
+    form {
+      .field {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          width: 100%;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}

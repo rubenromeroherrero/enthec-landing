@@ -17,7 +17,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     // scroll arriba al cargar web
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+    }),
   ],
   exports: [RouterModule],
 })

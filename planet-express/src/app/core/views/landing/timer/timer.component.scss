@@ -1,0 +1,48 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
+
+.container {
+  width: 100%;
+  @include flex-align-center-column;
+  background-color: $colorGray;
+
+  h2 {
+    color: $colorText;
+    font-size: 2rem;
+    padding: 4rem 0;
+  }
+
+  .timer {
+    display: flex;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $colorText;
+    margin: 0 0 2rem;
+    span {
+      background-color: rgba(204, 204, 204, 0.096);
+      border: none;
+      border-radius: 5px;
+      padding: 1.2rem 1.4rem;
+      font-size: 2rem;
+      margin: 0 3px 0 8px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    h2 {
+      font-size: 1.5rem;
+    }
+    .timer {
+      font-size: 1.2rem;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

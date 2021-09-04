@@ -38,4 +38,12 @@ export class HeaderComponent implements OnInit {
       this.menuPhone.nativeElement.classList.remove('scrolling');
     }
   }
+
+  @HostListener('document: click', ['$event'])
+  closeMenu(event: Event): void {
+    // si no haces click en la propiedad de menuPhone, se cierra
+    if (!this.menuPhone.nativeElement.contains(event.target)) {
+      this.activated = false;
+    }
+  }
 }

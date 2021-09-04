@@ -9,7 +9,8 @@
 
 
     <!-- ReactiveFormsModule -->
-    <form id="calculatorForm" [formGroup]="calculatorForm" (ngSubmit)="saveClick(calculatorForm)">
+    <form id="calculatorForm" [formGroup]="calculatorForm" (ngSubmit)="saveClick(calculatorForm)"
+        [ngClass]="{submited: submited}">
 
         <h3>Introduce los datos:</h3>
 

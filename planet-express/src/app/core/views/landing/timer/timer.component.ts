@@ -6,11 +6,11 @@ import { Subscription, interval } from 'rxjs';
   styleUrls: ['./timer.component.scss'],
 })
 export class TimerComponent implements OnInit, OnDestroy {
-  subscription: Subscription | undefined;
+  subscription!: Subscription;
 
   dateNow = new Date();
   // Fecha finalización
-  dDay = new Date('Sept 05 2021 00:00:00');
+  dDay = new Date('Sept 04 2021 19:32:00');
   milliSecondsInASecond = 1000;
   hoursInADay = 24;
   minutesInAnHour = 60;
@@ -23,6 +23,9 @@ export class TimerComponent implements OnInit, OnDestroy {
   daysToDday: number = 0;
 
   private getTimeDifference() {
+    if (this.timeDifference === 0) {
+      return;
+    }
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
     this.allocateTimeUnits(this.timeDifference);
   }
@@ -58,6 +61,6 @@ export class TimerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription?.unsubscribe();
+    this.subscription.unsubscribe();
   }
 }

@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './core/views/app.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -11,6 +12,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     BrowserModule,
     CoreModule,
     AppRoutingModule,
+    HttpClientModule,
     HotToastModule.forRoot(),
   ],
   providers: [],

@@ -44,6 +44,16 @@
           text-align: center;
           font-style: italic;
         }
+
+        &:focus {
+          box-shadow: 0 0 1px $colorGray;
+        }
+
+        &.ng-touched {
+          &.ng-invalid {
+            box-shadow: 0 0 2.5px red !important;
+          }
+        }
       }
     }
 
@@ -61,6 +71,15 @@
       margin: 1rem 0 0;
       font-style: italic;
       text-align: end;
+    }
+  }
+}
+
+// clase que se activa al formulario para cuando sean inválidos los datos
+.submited {
+  input {
+    &.ng-invalid {
+      box-shadow: 0 0 2.5px red !important;
     }
   }
 }

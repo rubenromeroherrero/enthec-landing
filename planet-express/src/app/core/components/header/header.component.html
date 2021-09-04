@@ -1,20 +1,21 @@
-<header class="pc">
+<header class="pc" #menu>
     <div class="logo" [routerLink]="['/landing']"></div>
     <div class="links">
-        <span [routerLink]="['/landing']">Inicio</span>
-        <span [routerLink]="['#']">Ofertas</span>
-        <span [routerLink]="['#']">Calculadora</span>
-        <span [routerLink]="['#']">Sobre Nosotros</span>
+        <a [routerLink]="['/landing']">Inicio</a>
+        <a [routerLink]="['']" fragment="ofert">Ofertas</a>
+        <a [routerLink]="['']" fragment="calculator">Calculadora</a>
+        <a [routerLink]="['']" fragment="employees">Sobre Nosotros</a>
     </div>
 </header>
 
-<header class="phoneIpad">
+<!-- PHONE/IPAD -->
+<header class="phoneIpad" #menuPhone>
     <div class="logo" [routerLink]="['/landing']"></div>
     <i class="fas fa-bars" (click)="showMenu()"></i>
     <div class="linksMenu" *ngIf="activated">
-        <span [routerLink]="['/landing']">Inicio</span>
-        <span [routerLink]="['#']">Ofertas</span>
-        <span [routerLink]="['#']">Calculadora</span>
-        <span [routerLink]="['#']">Sobre Nosotros</span>
+        <a [routerLink]="['/landing']">Inicio</a>
+        <a [routerLink]="['#']">Ofertas</a>
+        <a [routerLink]="['#']">Calculadora</a>
+        <a [routerLink]="['#']">Sobre Nosotros</a>
     </div>
 </header>

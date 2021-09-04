@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Employee } from 'src/app/core/models/employee';
-import { EmployeeService } from 'src/app/core/services/employees.service';
 import { ToastMessagesService } from 'src/app/core/services/toast-messages.service';
 
 @Component({
@@ -11,30 +9,29 @@ import { ToastMessagesService } from 'src/app/core/services/toast-messages.servi
 })
 export class NewsletterComponent implements OnInit {
   newsletterForm: FormGroup;
-  employees: Employee[] = [];
 
-  constructor(
-    fb: FormBuilder,
-    private serviceModel: EmployeeService,
-    private toastService: ToastMessagesService
-  ) {
+  // flag
+  submited: boolean = false;
+
+  constructor(fb: FormBuilder, private toastService: ToastMessagesService) {
     this.newsletterForm = fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
     });
   }
 
-  ngOnInit(): void {
-    // this.serviceModel.getEmployees().subscribe((result) => {
-    //   this.employees = result;
-    // });
-  }
+  ngOnInit(): void {}
 
   saveClick(form: FormGroup): void {
+    this.submited = true;
+
     if (form.valid) {
       this.toastService.showSuccess(
         `${form.value.email} ha sido registrado correctamente`
       );
+      this.submited = false;
       form.reset();
+    } else {
+      this.toastService.showError(`Debes introducir un email correcto`);
     }
   }
 }

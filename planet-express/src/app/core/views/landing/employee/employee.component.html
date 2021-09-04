@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Conoce a nuestro equipo</h1>
+    <div class="employees">
+        <div class="card" *ngFor="let employee of employees?.slice(0, 3);">
+            <img src="{{employee.PicUrl}}" alt="">
+            <h2>{{employee.Name}}</h2>
+            <p>{{employee.Profession}}</p>
+        </div>
+    </div>
+</div>

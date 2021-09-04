@@ -33,6 +33,15 @@
       &::placeholder {
         font-style: italic;
       }
+      &:focus {
+        box-shadow: 0 0 1px $colorGray;
+      }
+
+      &.ng-touched {
+        &.ng-invalid {
+          box-shadow: 0 0 2.5px red !important;
+        }
+      }
     }
 
     button {
@@ -41,12 +50,26 @@
       cursor: pointer;
       background-color: $colorRed;
       color: $colorText;
+
+      &:hover {
+        filter: brightness(0.9);
+        box-shadow: 0 0 1px $colorRed;
+      }
     }
 
     input,
     button {
       border: none;
       border-radius: 5px;
+    }
+  }
+}
+
+// clase que se activa al formulario para cuando sean inválidos los datos
+.submited {
+  input {
+    &.ng-invalid {
+      box-shadow: 0 0 2.5px red !important;
     }
   }
 }

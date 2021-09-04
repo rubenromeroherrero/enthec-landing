@@ -2,7 +2,8 @@
     <h2>RECIBE TODAS LAS NOTICIAS Y VENTAJAS DE PLANET EXPRESS</h2>
     <p>¿Quieres estar al tanto de cualquier novedad? Escribe tu email para poder suscribirte.</p>
 
-    <form id="newsletter" [formGroup]="newsletterForm" (ngSubmit)="saveClick(newsletterForm)">
+    <form id="newsletter" [formGroup]="newsletterForm" (ngSubmit)="saveClick(newsletterForm)"
+        [ngClass]="{submited: submited}">
         <input type="email" placeholder="Introduce el email" formControlName="email">
         <button type="submit">ÚNETE</button>
     </form>

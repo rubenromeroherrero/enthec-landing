@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +13,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   activated: boolean = false;
+  // Cogemos elementos del DOM
+  @ViewChild('menu') menu!: ElementRef;
+  @ViewChild('menuPhone') menuPhone!: ElementRef;
+
+  scrolling: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   showMenu(): void {
-    if (this.activated === false) {
-      this.activated = true;
+    this.activated = !this.activated;
+  }
+
+  // Escuchamos el evento scroll
+  @HostListener('document: scroll', [])
+  scrollingHeader(): void {
+    if (document.scrollingElement?.scrollTop) {
+      this.menu.nativeElement.classList.add('scrolling');
+      this.menuPhone.nativeElement.classList.add('scrolling');
     } else {
-      this.activated = false;
+      this.menu.nativeElement.classList.remove('scrolling');
+      this.menuPhone.nativeElement.classList.remove('scrolling');
     }
   }
 }

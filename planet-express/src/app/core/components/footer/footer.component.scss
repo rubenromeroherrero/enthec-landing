@@ -1,0 +1,13 @@
+@import "../../../../variables";
+@import "../../../../mixins";
+
+.container {
+  background: $colorGray;
+  color: $colorText;
+  padding: 2.25rem 5%;
+  text-align: center;
+
+  p {
+    font-weight: 300;
+  }
+}

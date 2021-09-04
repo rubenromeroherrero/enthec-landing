@@ -7,7 +7,7 @@ header {
   background-color: $colorGray;
   width: 100%;
   @include flex-justify-between;
-  // position: fixed;
+  position: fixed;
   .logo {
     background-image: url("../../../../../images/Planet_Favicon.png");
     width: 250px;
@@ -16,9 +16,11 @@ header {
     cursor: pointer;
   }
   .links {
-    span {
+    a {
       margin-right: 2rem;
       cursor: pointer;
+      text-decoration: none;
+      color: unset;
 
       &:hover {
         color: $colorRed;
@@ -31,6 +33,11 @@ header {
   display: none;
 }
 
+.scrolling {
+  opacity: 95%;
+  padding: 0.5rem 6%;
+}
+
 @media (max-width: 960px) {
   .pc {
     display: none;
@@ -38,6 +45,7 @@ header {
   // PHONE
   .phoneIpad {
     position: relative;
+    position: fixed;
     @include flex-justify-between;
     .logo {
       height: 50px;
@@ -55,10 +63,11 @@ header {
       background-color: $colorText;
       border-radius: 5px;
       padding: 1rem 2rem;
-      span {
+      a {
         cursor: pointer;
         margin: 1rem 0;
         color: $colorGray;
+        text-decoration: none;
         &:hover {
           color: $colorRed;
         }

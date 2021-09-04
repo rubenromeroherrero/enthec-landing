@@ -10,6 +10,7 @@ import { CalculatorComponent } from './views/landing/calculator/calculator.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsletterComponent } from './views/landing/newsletter/newsletter.component';
+import { EmployeeComponent } from './views/landing/employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NewsletterComponent } from './views/landing/newsletter/newsletter.compo
     TimerComponent,
     CalculatorComponent,
     NewsletterComponent,
+    EmployeeComponent,
   ],
   imports: [CommonModule, RouterModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

@@ -5,25 +5,27 @@ import { Subscription, interval } from 'rxjs';
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss'],
 })
-export class TimerComponent implements OnInit, OnDestroy {
+export class TimerComponent implements OnInit {
   subscription!: Subscription;
 
   dateNow = new Date();
   // Fecha finalización
-  dDay = new Date('Sept 04 2021 19:32:00');
+  dDay = new Date('Sept 06 2021 00:00:00');
   milliSecondsInASecond = 1000;
   hoursInADay = 24;
   minutesInAnHour = 60;
   SecondsInAMinute = 60;
 
-  timeDifference: number = 0;
+  timeDifference: number = 1000;
   secondsToDday: number = 0;
   minutesToDday: number = 0;
   hoursToDday: number = 0;
   daysToDday: number = 0;
 
   private getTimeDifference() {
-    if (this.timeDifference === 0) {
+    if (this.timeDifference < 1000) {
+      this.allocateTimeUnits(0);
+      this.subscription.unsubscribe();
       return;
     }
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
@@ -58,9 +60,5 @@ export class TimerComponent implements OnInit, OnDestroy {
     this.subscription = interval(1000).subscribe((x) => {
       this.getTimeDifference();
     });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 }

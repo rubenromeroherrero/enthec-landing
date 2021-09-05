@@ -20,13 +20,13 @@
 - Footer
 - Control de errores y mensajes aclaratorios.
 
-### Tecnologías y lenguaje utilizados
+### 2.- 📣Tecnologías y lenguaje utilizados
 
 - Angular 12.0.3v
 - SASS: pre-procesador CSS
 - TypeScript
 
-### Librerías
+### 3.- 📂Librerías
 
 - | hot-toast | --> para mensajes aclaratorios en Angular
 - | rxjs |
@@ -50,7 +50,6 @@
    npm install
    ```
 4. Correr la aplicación
-
-```sh
-  npm run start
-```
+   ```sh
+   npm run start
+   ```

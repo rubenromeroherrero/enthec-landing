@@ -41,9 +41,9 @@
    ```
 2. Acceder a la carpeta en la cual se encuentra la app --> planet-express
 
-```sh
-  cd planet-express
-```
+   ```sh
+   cd planet-express
+   ```
 
 3. Instalar los paquetes NPM
    ```sh

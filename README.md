@@ -56,4 +56,5 @@
    ```
 
 5.- Navegar a la aplicación: http://localhost:4200/
+
 6.- Github pages: https://rubenromeroherrero.github.io/enthec-landing/landing

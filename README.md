@@ -55,8 +55,4 @@
    ng serve
    ```
 
-5.- Navegar a la aplicación:
-
-    ```sh
-    http://localhost:4200/
-    ```
+5.- Navegar a la aplicación: http://localhost:4200/

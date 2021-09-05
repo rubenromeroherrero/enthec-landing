@@ -50,6 +50,13 @@
    npm install
    ```
 4. Correr la aplicación
+
    ```sh
-   npm run start
+   ng serve
    ```
+
+5.- Navegar a la aplicación:
+
+    ```sh
+    http://localhost:4200/
+    ```

@@ -2,12 +2,12 @@
 
 - Prueba técnica `.Front-End` para Enthec Solutions, que consiste en realizar una landing page como si fuera Planet Express .
 
-### 1.- Funcionalidad del proyecto
+### 1.- 💻Funcionalidad del proyecto
 
 - Página web (landing) responsive, adaptable a los diferentes dispositivos (móvil, tablet, ordenador).
 - La landing consiste en una web que hable sobre la empresa, sus servicios y las ofertas de envío que ofrecen.
 
-### 2.- Secciones del proyecto
+### 2.- 📋Secciones del proyecto
 
 - Header con los diferentes enlaces que nos vinculan con las diferentes partes de la web.
 - Sección con los servicios que ofrece Planet Express.
